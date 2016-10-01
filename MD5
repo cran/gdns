@@ -1,0 +1,17 @@
+fb1a7e71b7ad4be44832ec598338975a *DESCRIPTION
+340c134c492be350f00302216dff4a71 *LICENSE
+9f92561f63963fe23ea8b4077ae5e004 *NAMESPACE
+923345eb6e50ca3e3070de4be4256115 *NEWS.md
+28e3a66057765360bedeb41dd19281db *R/gdns-package.r
+82c8963b9808d02c21397f7d1acd253c *R/gdns.r
+acfb88744d10774f8b5cd6e25442fa69 *R/spf.r
+f1f1603508b23040c0514efb495fa07c *README.md
+5ee6fa1f89a8445c64c9f875d6eb25b2 *man/bulk_query.Rd
+e12268c730eb50459145909da7ac3c5e *man/gdns.Rd
+c026a48c6f01933a218275e6a01f0838 *man/has_spf.Rd
+b6600c4e47f177444e2bfac82a2af36f *man/is_soft_fail.Rd
+66c4970db483159c580813ea06415771 *man/query.Rd
+d017e1fc2972f9c092000b90970e89b9 *man/spf_ipv4s.Rd
+af1d70d0896e0df3f3b35c285d2678f9 *man/split_spf.Rd
+5b94e17a21fb4520737e98de3f2d6c99 *tests/testthat.R
+6c5d767b56229e1c70ee34f4aeb64a61 *tests/testthat/test-gdns.R
