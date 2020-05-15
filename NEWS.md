@@ -1,3 +1,17 @@
+# gdns 0.5.0
+
+* Addressed CRAN check issues
+* Switched to tinytest
+* Switched to MIT license
+* Added support for 'dns-message' new content type
+
+# gdns 0.4.0
+
+* Updated the JSON API endpoint per Google notification
+* Added `dig()` alias for `query()`
+* Added an `as.data.frame()` coercer for query results
+* Added IANA DNS-related datasets
+
 # gdns 0.3.1
 
 * fixed bug in `bulk_query()`

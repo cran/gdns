@@ -4,7 +4,13 @@
 \alias{bulk_query}
 \title{Vectorized query, returning only answers in a data frame}
 \usage{
-bulk_query(entities, type = 1, edns_client_subnet = "0.0.0.0/0")
+bulk_query(
+  entities,
+  type = 1,
+  cd = FALSE,
+  do = FALSE,
+  edns_client_subnet = "0.0.0.0/0"
+)
 }
 \arguments{
 \item{entities}{character vector of entities to query}
@@ -12,6 +18,12 @@ bulk_query(entities, type = 1, edns_client_subnet = "0.0.0.0/0")
 \item{type}{RR type can be represented as a number in [1, 65535] or canonical
 string (A, aaaa, etc). More information on RR types can be
 found \href{http://www.iana.org/assignments/dns-parameters/dns-parameters.xhtml#dns-parameters-4}{here}.}
+
+\item{cd}{(Checking Disabled) flag. Use `TRUE` to disable DNSSEC validation;
+Default: `FALSE`.}
+
+\item{do}{(DNSSEC OK) flag. Use `TRUE` include DNSSEC records (RRSIG, NSEC, NSEC3);
+Default: `FALSE`.}
 
 \item{edns_client_subnet}{The edns0-client-subnet option. Format is an IP
 address with a subnet mask. Examples: \code{1.2.3.4/24},
@@ -35,8 +47,10 @@ this is a fairly naive function. It expects \code{Answer} to be one of the
       to do bulk forward queries. It will get smarter in future versions.
 }
 \examples{
-hosts <- c("rud.is", "r-project.org", "rstudio.com", "apple.com")
-gdns::bulk_query(hosts)
+if (tinytest::at_home()) {
+  hosts <- c("rud.is", "r-project.org", "rstudio.com", "apple.com")
+  gdns::bulk_query(hosts)
+}
 }
 \references{
 \url{https://developers.google.com/speed/public-dns/docs/dns-over-https}
